@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("back.png");
+        }
+
+        .entire_area {
+            width: 294px;
+            /*  가로크기 늘리고 싶을때 수정 */
+            background-color: skyblue;
+            height: 100%;
+        }
+
+        .photo_area {
+            margin-top: 30px;
+        }
+
+        .photo_frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 392px;
+            /*  세로크기 늘리고 싶을때 수정 */
+            background-size: cover;
+            position: relative;
+        }
+
+        .end {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 35px;
+            font-weight: 100;
+            color: white;
+        }
+
+        .date {
+            font-size: 25px;
+            font-weight: 500;
+            color: white;
+        }
+
+        /* ./img1.png 현재 폴더에 있는 img1.png 파일에 접근하라는 명령 */
+
+
+        #img1 {
+            background-image: url("./용문1.jpg");
+
+        }
+
+        #img2 {
+            background-image: url("./img2.png");
+
+        }
+
+        #img3 {
+            background-image: url("./img3.png");
+        }
+
+        #img4 {
+            background-image: url("./img4.png");
+        }
+
+        .photo_desc {
+            /* 배경: 검은색, 글자: 흰색 */
+            font-size: 13px;
+            color: white;
+            background-color: black;
+
+            /* 가로 너비는 내부 범위에 딱 맞추기
+            padding: 상하 좌우 띄움
+            margin-bottom: 하단부분을 띄워줌
+            */
+            width: fit-content;
+            padding: 0px 20px;
+            margin-bottom: 10px;
+
+            /* 경계선 
+            테두리를 둥글게 깍음
+            */
+            border-radius: 10px;
+
+            /* 배치를정하고 이동*/
+            position: absolute;
+            bottom: 0;
+
+            /* 가운데정렬 */
+            transform: translate(-50%);
+            left: 50%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="entire_area">
+        <div class="photo_area">
+            <pre>
+            엄마,아빠에게 
+            오늘은 어버이날 이에요 
+            항상 감사하고 사랑합니다.
+        </pre>
+            <div id="img1" class="photo_frame">
+                <span id="img1_desc" class="photo_desc">
+                    문수구장에서..
+                </span>
+            </div>
+
+        </div>
+        <div class="end">
+    
+            <p class="title"></p>
+            <p class="date">2023년 5월 8일</p>
+        </div>
+        
+    </div>
+</body>
+
+</html>
